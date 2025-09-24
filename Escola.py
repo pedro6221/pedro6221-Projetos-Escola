@@ -396,5 +396,3 @@ class Diretoria(Escola):
 
 
 
-git config --global user.email "jpfa0809@gmail.com"
-git config --global user.name "pedro6221"
