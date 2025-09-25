@@ -44,5 +44,4 @@ carro1.frear(20)
 carro2.frear(15)
 
 print(carro1.detalhes())
-
 print(carro2.detalhes())
