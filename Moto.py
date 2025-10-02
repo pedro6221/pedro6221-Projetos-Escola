@@ -21,6 +21,7 @@ class Moto:
         print(f"a moto {self.modelo} desacelerou para {self.velocidade} km/h")
 
     def detalhes(self):
+        
         return f"{self.modelo}  ({self.ano}) - Cor: {self.cor}, Velocidade: {self.velocidade} km/h"
     
 M1 = Moto("pop100", 2015, "prata", 43)
