@@ -4,6 +4,8 @@ class Escola:
         self.idade=idade
         self.cpf=cpf
         # self.turma=turma
+        #self._cpf          o CPF fica protegido
+        #self.__cpf         o CPF fica privado
         
         
 class Aluno(Escola):
