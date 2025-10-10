@@ -16,9 +16,9 @@ class Casa:
         
         self.banheiro=int(input("Quantos banheiros tem sua casa? "))
         
-        self.tamanho=float(input("Qual tamanho de sua casa em metros quadrados? "))
+        self.tamanho=float(input("Qual tamanho de sua casa em m²? "))
         
-        return f"Essa casa é da cor {self.cor}, tem {self.quarto} quartos, {self.banheiro} banheiros e tem {self.tamanho} metros quadrados "
+        return f"Essa casa é da cor {self.cor}, tem {self.quarto} quartos, {self.banheiro} banheiros e tem {self.tamanho} m² "
         
 # C=Casa()
 # print(C.descrever())
