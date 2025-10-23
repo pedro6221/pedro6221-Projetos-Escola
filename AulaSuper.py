@@ -7,10 +7,10 @@ class Pessoa:
         return f"Olá,eu sou {self.nome} e tenho CPF {self.cpf}"
     
 class Aluno(Pessoa):
-    def __init__(self, nome:str,matricula:str,cpf:int) -> None:
-        super().__init__(nome)
+    def __init__(self,nome : str,matricula:str,cpf:int) -> None:
+        super().__init__(nome,cpf)
         self.matricula=matricula
-        super().__init__(cpf)
+        
         
         
         def apresentar(self) ->str:
@@ -20,8 +20,8 @@ class Aluno(Pessoa):
 p=Pessoa("Joao",1234567890)
 a=Aluno("ana","A456",12345332112)
 
-print(Pessoa.apresentar())
-print(Aluno.apresentar())        
+print(p.apresentar())
+print(a.apresentar())        
 # class Professor(Pessoa):
 #     def __init__(self, nome: str,disciplina:str,cpf:int) -> None:
 #         super().__init__(nome)
