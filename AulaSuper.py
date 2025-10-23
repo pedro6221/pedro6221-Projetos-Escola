@@ -13,22 +13,34 @@ class Aluno(Pessoa):
         
         
         
-        def apresentar(self) ->str:
-            base= super().apresentar()
-            return f"{base} e sou aluno, matricula {self.matricula}"
+    def apresentar(self) ->str:
+     base= super().apresentar()
+     return f"{base} e sou aluno, matricula {self.matricula}"
 
-class Professor(Pessoa,Aluno):
-    def __init__(self, nome: str, cpf: int,matricula: str )-> None:
-        super().__init__(nome, cpf)
-        super().__init__(matricula)
+class Professor(Aluno):
+    def __init__(self, nome=None, cpf=None,matricula=None,materia=None):
+        if nome is None:
+            nome=input("Digite seu nome:")
+        
+        if matricula is None:
+            matricula=input("Digite sua matrícula:")
+        
+        if cpf is None:
+            cpf=input("digite seu CPF:")
+        
+        if materia is None:
+            materia=input("digite sua matéria: ")
+        
+        super().__init__(nome,matricula,cpf)
+        self.materia=materia
     
-    def apresentar(self)->str :
+    def apresentar(self)->str : 
         base=super().apresentar()
-        return f"{base} e eu sou Professor"
+        return f"{base} e eu sou Professor da matéria {self.materia}"
 
 p=Pessoa("Joao",1234567890)
 a=Aluno("ana","A456",12345332112)
-pr=Professor("Mario",12345555554,"A765")
+pr=Professor()
 
 print(p.apresentar())
 print(a.apresentar())     
