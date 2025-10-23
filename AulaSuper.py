@@ -17,11 +17,22 @@ class Aluno(Pessoa):
             base= super().apresentar()
             return f"{base} e sou aluno, matricula {self.matricula}"
 
+class Professor(Pessoa,Aluno):
+    def __init__(self, nome: str, cpf: int,matricula: str )-> None:
+        super().__init__(nome, cpf)
+        super().__init__(matricula)
+    
+    def apresentar(self)->str :
+        base=super().apresentar()
+        return f"{base} e eu sou Professor"
+
 p=Pessoa("Joao",1234567890)
 a=Aluno("ana","A456",12345332112)
+pr=Professor("Mario",12345555554,"A765")
 
 print(p.apresentar())
-print(a.apresentar())        
+print(a.apresentar())     
+print(pr.apresentar())   
 # class Professor(Pessoa):
 #     def __init__(self, nome: str,disciplina:str,cpf:int) -> None:
 #         super().__init__(nome)
