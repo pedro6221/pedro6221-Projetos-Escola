@@ -1,6 +1,7 @@
 from Concessionaria import Veiculo,User,Admin
-V=Veiculo()
-U=User()
-A=Admin() 
-
-
+# v=Veiculo()
+# v.comprar()
+u=User()
+u.comprar()
+# a=Admin()
+# a.comprar()
