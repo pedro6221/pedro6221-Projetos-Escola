@@ -16,7 +16,6 @@ class Veiculo:
                 if esc == 2:
                     break
 
-                if esc == 1:
                     while True:
                         tipo = int(input("""
                         Digite o tipo do veículo:
@@ -44,6 +43,12 @@ class Veiculo:
                             break
                         else:
                             print("Cor inválida, tente novamente.")
+    
+     def exibir(self):
+        if self.tipo:
+            print(f"Veículo: {self.tipo} | Marca: {self.marca} | Cor: {self.cor}")
+        else:
+            print("Nenhum veículo cadastrado.")
 
 
 class User(Veiculo):
@@ -79,6 +84,12 @@ class Admin(User):
 
     def comprar(self):
         super().comprar()
+    
+    def remover_veiculo(self):
+        self.tipo = None
+        self.marca = None
+        self.cor = None
+        print("Veículo removido com sucesso!")
 
 
 
