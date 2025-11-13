@@ -49,7 +49,7 @@ class Programador:
 def salario(poli):
     poli.salario()
 
-
+pro=Profissoes()
 M=Medico()
 E=Engenheiro()
 P=Professor()
