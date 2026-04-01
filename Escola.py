@@ -4,6 +4,8 @@ class Escola:
         self.idade=idade
         self.cpf=cpf
         # self.turma=turma
+        #self._cpf          o CPF fica protegido Ex:idade e coisas que subclasses podem acessar,nao qualquer um
+        #self.__cpf         o CPF fica privado Ex:senha,saldo bancario,numero do cartao de crédito etc
         
         
 class Aluno(Escola):
@@ -96,7 +98,7 @@ class Professor(Escola):
 
                 print("o professor "+self.nome+" Avisou que:\n"+avs)
 
-class Coordenador(Escola): #class Coordenador(Escola,Professor):
+class Coordenador(Escola,Professor): #class Coordenador(Escola,Professor): 
     def idCoor(self):
         
         esc=0
@@ -394,7 +396,25 @@ class Diretoria(Escola):
 # p11.idDir()
 
 
+#OBS:Eu poderia colocar funçoes para cada coisa que a classe ia fazer ao inves de usar if gigantes usar por exemplo:
+#professor escpçher calcular notas e tambem botar frequencia
+#ao inves de usar if esc==1
+#fazer:
+#def calcular_media():
+#   calculando
+#def frequencia():
+#   vendo frequencia
+#if esc==1
+#   nota= calcular_media()
+#elif esc==2:
+#   frequen=frequencia()
 
+#ai coordenador herda professor e pode usar esses metodos
+#class Coordenador(Escola,Professor):
+#   if esc==1:
+#       media=super()calcular_media() #super é a funçao de puxar coisas da classe pai
+#isso evita muitas linhas de código
 
-git config --global user.email "jpfa0809@gmail.com"
-git config --global user.name "pedro6221"
+#João Pedro DS2
+
+  
